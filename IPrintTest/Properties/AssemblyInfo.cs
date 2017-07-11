@@ -7,11 +7,11 @@ using System.Windows;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("IPrint")]
-[assembly: AssemblyDescription("Adds PrintDialog wraper to your project (with preview window)")]
+[assembly: AssemblyTitle("IPrintTest")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Vitaliy Sorokovikov")]
-[assembly: AssemblyProduct("IPrint")]
+[assembly: AssemblyProduct("IPrintTest")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -31,13 +31,13 @@ using System.Windows;
 //[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
 
-[assembly:ThemeInfo(
+[assembly: ThemeInfo(
     ResourceDictionaryLocation.None, //где расположены словари ресурсов по конкретным тематикам
-                             //(используется, если ресурс не найден на странице 
-                             // или в словарях ресурсов приложения)
+                                     //(используется, если ресурс не найден на странице 
+                                     // или в словарях ресурсов приложения)
     ResourceDictionaryLocation.SourceAssembly //где расположен словарь универсальных ресурсов
-                                      //(используется, если ресурс не найден на странице, 
-                                      // в приложении или в каких-либо словарях ресурсов для конкретной темы)
+                                              //(используется, если ресурс не найден на странице, 
+                                              // в приложении или в каких-либо словарях ресурсов для конкретной темы)
 )]
 
 

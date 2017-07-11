@@ -118,54 +118,54 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Copies" xml:space="preserve">
-    <value>Copies</value>
+    <value>Копий</value>
   </data>
   <data name="Duplex" xml:space="preserve">
-    <value>Duplex</value>
+    <value>Параметры</value>
   </data>
   <data name="DuplexOneSided" xml:space="preserve">
-    <value>One side</value>
+    <value>Односторонняя</value>
   </data>
   <data name="DuplexTwoSidedLongEdge" xml:space="preserve">
-    <value>Two side, flip on long edge</value>
+    <value>Двусторонняя (длинная кромка)</value>
   </data>
   <data name="DuplexTwoSidedShortEdge" xml:space="preserve">
-    <value>Two side, flip on short edge</value>
+    <value>Двусторонняя (короткая кромка)</value>
   </data>
   <data name="Header" xml:space="preserve">
-    <value>Print</value>
+    <value>Печать</value>
   </data>
   <data name="Orientation" xml:space="preserve">
-    <value>Orientation</value>
+    <value>Ориентация</value>
   </data>
   <data name="OrientationLandscape" xml:space="preserve">
-    <value>Landscape</value>
+    <value>Альбомная</value>
   </data>
   <data name="OrientationPortrait" xml:space="preserve">
-    <value>Portrait</value>
+    <value>Книжная</value>
   </data>
   <data name="PageCountPrefix" xml:space="preserve">
-    <value>Total: </value>
+    <value>Всего: </value>
   </data>
   <data name="PageCountSuffix" xml:space="preserve">
-    <value> pages</value>
+    <value> лист. бумаги</value>
   </data>
   <data name="Pages" xml:space="preserve">
-    <value>Pages</value>
+    <value>Страницы</value>
   </data>
   <data name="PagesAll" xml:space="preserve">
-    <value>All</value>
+    <value>Все</value>
   </data>
   <data name="PagesNumberExample" xml:space="preserve">
-    <value>For example: 5-7</value>
+    <value>Например: 5-7</value>
   </data>
   <data name="PrintButton" xml:space="preserve">
-    <value>Print</value>
+    <value>Печать</value>
   </data>
   <data name="Printer" xml:space="preserve">
-    <value>Printer</value>
+    <value>Принтер</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Preview</value>
+    <value>Предпросмотр</value>
   </data>
 </root>
