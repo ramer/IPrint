@@ -12,12 +12,12 @@ namespace IPrintTest
 
         private void btnPreview_Click(object sender, RoutedEventArgs e)
         {
-            IPrintProvider.ShowPreview(fdSample, "FlowDocument print test");
+            IPrintProvider.ShowPreview(fdSample);
         }
 
         private void btnPrint_Click(object sender, RoutedEventArgs e)
         {
-            IPrintProvider.PrintDocument(fdSample, "FlowDocument print test");
+            IPrintProvider.PrintDocument(fdSample);
         }
     }
 }

@@ -11,12 +11,13 @@ namespace IPrint
     public class IPrintProvider
     {
 
-        public static bool ShowPreview (FlowDocument flowdocument, string description,bool singlecolumn = true, Window owner = null)
+        public static bool ShowPreview (FlowDocument flowdocument, string description = "", bool singlecolumn = true, Window owner = null)
         {
             if (flowdocument == null) { return false; }
 
             Preview w = new Preview();
             w.fd = FlowDocumentClone(flowdocument);
+            w.description = description;
             w.singlecolumn = singlecolumn;
 
             if (!(owner == null)) { w.Owner = owner; w.Icon = owner.Icon; }
@@ -36,7 +37,7 @@ namespace IPrint
             }
         }
 
-        public static bool PrintDocument(FlowDocument flowdocument, string description, bool singlecolumn = true)
+        public static bool PrintDocument(FlowDocument flowdocument, string description = "", bool singlecolumn = true)
         {
             if (flowdocument == null) { return false; }
 
