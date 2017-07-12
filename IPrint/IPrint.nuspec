@@ -12,6 +12,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Adds PrintDialog wraper to your project (with preview window)</description>
     <copyright>Copyright 2017</copyright>
-    <tags>PrintDialog FlowDocument print printing WPF</tags>
+    <tags>PrintDialog FlowDocument UIElement print printing WPF</tags>
   </metadata>
 </package>
