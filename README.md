@@ -16,12 +16,12 @@ FlowDocument fd;
 // Fill fd here 
 
   // prints document to default printer with default settings
-IPrintProvider.PrintDocument(fdSample, "FlowDocument print test");
+IPrintProvider.PrintDocument(fd);
 
 // OR
 
   // show preview Window with printer/page settings
-IPrintProvider.ShowPreview(fdSample, "FlowDocument print test");
+IPrintProvider.ShowPreview(fd);
 ```
 
 ### Parameters:
