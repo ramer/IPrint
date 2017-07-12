@@ -8,23 +8,45 @@ Repo contains two projects:
 ### IPrint class library usage:
 #### C#
 
+###### FlowDocument
+
 ```C#
 using IPrint;
 
 FlowDocument fd;
 
-// Fill fd here 
+// Fill FlowDocument here 
 
   // prints document to default printer with default settings
-IPrintProvider.PrintDocument(fd);
+IPrintDialog.PrintDocument(fd);
 
 // OR
 
   // show preview Window with printer/page settings
-IPrintProvider.ShowPreview(fd);
+IPrintDialog.PreviewDocument(fd);
+```
+
+###### UIElement
+
+```C#
+using IPrint;
+
+Grid uie;
+
+// Fill Grid here 
+
+  // prints document to default printer with default settings
+IPrintDialog.PrintUIElement(uie);
+
+// OR
+
+  // show preview Window with printer/page settings
+IPrintDialog.PreviewUIElement(uie);
 ```
 
 ### Parameters:
 
 * **flowdocument** - Document that will be printed
+* **uielement** - UIElement that will be printed
+
 
