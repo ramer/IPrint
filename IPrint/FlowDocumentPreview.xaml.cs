@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Globalization;
 using System.Linq;
 using System.Printing;
 using System.Text.RegularExpressions;
@@ -11,7 +10,7 @@ using System.Windows.Media;
 
 namespace IPrint
 {
-    public partial class Preview : Window
+    public partial class FlowDocumentPreview : Window
     {
         public FlowDocument fd;
         public string description;
@@ -19,12 +18,9 @@ namespace IPrint
 
         private PrintDialog pd = new PrintDialog();
 
-        public Preview()
+        public FlowDocumentPreview()
         {
-            System.Threading.Thread.CurrentThread.CurrentUICulture =
-            new System.Globalization.CultureInfo("ru-RU");
             InitializeComponent();
-            //pd.PageRange = new PageRange()
         }
 
         private void Preview_Loaded(object sender, RoutedEventArgs e)
@@ -86,20 +82,20 @@ namespace IPrint
 
         private void PreparePreview()
         {
-            FlowDocument previewfd = IPrintProvider.FlowDocumentClone(fd);
+            FlowDocument previewfd = IPrintDialog.FlowDocumentClone(fd);
             PageImageableArea area = pd.PrintQueue.GetPrintCapabilities().PageImageableArea;
 
             if (area != null && area != null)
             {
                 if (pd.PrintTicket.PageOrientation == PageOrientation.Portrait)
                 {
-                    previewfd.PageWidth = area.ExtentWidth + area.OriginWidth;
-                    previewfd.PageHeight = area.ExtentHeight + area.OriginHeight;
+                    previewfd.PageWidth = area.ExtentWidth + area.OriginWidth * 2;
+                    previewfd.PageHeight = area.ExtentHeight + area.OriginHeight * 2;
                 }
                 else if (pd.PrintTicket.PageOrientation == PageOrientation.Landscape)
                 {
-                    previewfd.PageWidth = area.ExtentHeight + area.OriginHeight;
-                    previewfd.PageHeight = area.ExtentWidth + area.OriginWidth;
+                    previewfd.PageWidth = area.ExtentHeight + area.OriginHeight * 2;
+                    previewfd.PageHeight = area.ExtentWidth + area.OriginWidth * 2;
                 }
             }
 
@@ -115,25 +111,25 @@ namespace IPrint
             DocumentPaginator previewpaginator = ((IDocumentPaginatorSource)previewfd).DocumentPaginator;
             previewpaginator.ComputePageCount();
             rnPageCount.Text = previewpaginator.PageCount.ToString();
-            fdpvAct.Document = previewfd;
+            fdpvPreview.Document = previewfd;
         }
 
         private void PreparePrint()
         {
-            FlowDocument printfd = IPrintProvider.FlowDocumentClone(fd);
+            FlowDocument printfd = IPrintDialog.FlowDocumentClone(fd);
             PageImageableArea area = pd.PrintQueue.GetPrintCapabilities().PageImageableArea;
 
             if (area != null && area != null)
             {
                 if (pd.PrintTicket.PageOrientation == PageOrientation.Portrait)
                 {
-                    printfd.PageWidth = area.ExtentWidth + area.OriginWidth;
-                    printfd.PageHeight = area.ExtentHeight + area.OriginHeight;
+                    printfd.PageWidth = area.ExtentWidth + area.OriginWidth * 2;
+                    printfd.PageHeight = area.ExtentHeight + area.OriginHeight * 2;
                 }
                 else if (pd.PrintTicket.PageOrientation == PageOrientation.Landscape)
                 {
-                    printfd.PageWidth = area.ExtentHeight + area.OriginHeight;
-                    printfd.PageHeight = area.ExtentWidth + area.OriginWidth;
+                    printfd.PageWidth = area.ExtentHeight + area.OriginHeight * 2;
+                    printfd.PageHeight = area.ExtentWidth + area.OriginWidth * 2;
                 }
             }
 

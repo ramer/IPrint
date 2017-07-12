@@ -43,15 +43,22 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Preview.xaml">
+    <Compile Include="UIElementPreview.xaml.cs">
+      <DependentUpon>UIElementPreview.xaml</DependentUpon>
+    </Compile>
+    <Page Include="FlowDocumentPreview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include="IPrintProvider.cs" />
+    <Compile Include="IPrintDialog.cs" />
     <Compile Include="PageRangeDocumentPaginator.cs" />
-    <Compile Include="Preview.xaml.cs">
-      <DependentUpon>Preview.xaml</DependentUpon>
+    <Compile Include="FlowDocumentPreview.xaml.cs">
+      <DependentUpon>FlowDocumentPreview.xaml</DependentUpon>
     </Compile>
+    <Page Include="UIElementPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

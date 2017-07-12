@@ -1,4 +1,4 @@
-﻿<Window x:Class="IPrint.Preview"
+﻿<Window x:Class="IPrint.UIElementPreview"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -60,7 +60,7 @@
                 </StackPanel>
             </Border>
             <Border Background="#FF777777">
-                <FlowDocumentReader x:Name="fdpvAct" Padding="20" Foreground="Black" Background="{Binding Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" MinZoom="100" IsScrollViewEnabled="False" IsFindEnabled="False" IsPrintEnabled="False" IsTwoPageViewEnabled="True"/>
+                <Viewbox x:Name="vbPreview"/>
             </Border>
         </DockPanel>
     </Grid>

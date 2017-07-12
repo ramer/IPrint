@@ -10,14 +10,24 @@ namespace IPrintTest
             InitializeComponent();
         }
 
-        private void btnPreview_Click(object sender, RoutedEventArgs e)
+        private void btnFlowDocumentPreview_Click(object sender, RoutedEventArgs e)
         {
-            IPrintProvider.ShowPreview(fdSample);
+            IPrintDialog.PreviewDocument(fdSample);
         }
 
-        private void btnPrint_Click(object sender, RoutedEventArgs e)
+        private void btnFlowDocumentPrint_Click(object sender, RoutedEventArgs e)
         {
-            IPrintProvider.PrintDocument(fdSample);
+            IPrintDialog.PrintDocument(fdSample);
+        }
+
+        private void btnUIElementPreview_Click(object sender, RoutedEventArgs e)
+        {
+            IPrintDialog.PreviewUIElement(grdSample);
+        }
+
+        private void btnUIElementPrint_Click(object sender, RoutedEventArgs e)
+        {
+            IPrintDialog.PrintUIElement(grdSample);
         }
     }
 }
