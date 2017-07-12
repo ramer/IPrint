@@ -17,7 +17,7 @@ FlowDocument fd;
 
 // Fill FlowDocument here 
 
-  // prints document to default printer with default settings
+  // prints FlowDocument to default printer with default settings
 IPrintDialog.PrintDocument(fd);
 
 // OR
@@ -35,7 +35,7 @@ Grid uie;
 
 // Fill Grid here 
 
-  // prints document to default printer with default settings
+  // prints UIElement to default printer with default settings
 IPrintDialog.PrintUIElement(uie);
 
 // OR
